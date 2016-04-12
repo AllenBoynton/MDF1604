@@ -16,7 +16,6 @@
 		098B82251CB9B05900904F1E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B82241CB9B05900904F1E /* CustomTableViewCell.swift */; };
 		098B82271CB9C38D00904F1E /* CustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098B82261CB9C38D00904F1E /* CustomHeader.xib */; };
 		098B82291CB9C77600904F1E /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B82281CB9C77600904F1E /* CustomHeader.swift */; };
-		098B822F1CBAF83500904F1E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B822E1CBAF83500904F1E /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		098B82241CB9B05900904F1E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		098B82261CB9C38D00904F1E /* CustomHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeader.xib; sourceTree = "<group>"; };
 		098B82281CB9C77600904F1E /* CustomHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
-		098B822E1CBAF83500904F1E /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertViewController.swift; path = ../../CE1_UITableViews/CE1_UITableViews/AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 			children = (
 				098B820C1CB971C600904F1E /* AppDelegate.swift */,
 				098B82261CB9C38D00904F1E /* CustomHeader.xib */,
-				098B822E1CBAF83500904F1E /* AlertViewController.swift */,
 				098B82281CB9C77600904F1E /* CustomHeader.swift */,
 				098B82221CB9757400904F1E /* Vacations.swift */,
 				098B821E1CB9720500904F1E /* TableViewController.swift */,
@@ -153,7 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				098B82231CB9757400904F1E /* Vacations.swift in Sources */,
-				098B822F1CBAF83500904F1E /* AlertViewController.swift in Sources */,
 				098B820D1CB971C600904F1E /* AppDelegate.swift in Sources */,
 				098B82251CB9B05900904F1E /* CustomTableViewCell.swift in Sources */,
 				098B821F1CB9720500904F1E /* TableViewController.swift in Sources */,
