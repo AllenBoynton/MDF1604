@@ -29,41 +29,25 @@ class TableViewController: UITableViewController {
         
         // MARK: Section 1
         
-        // Get the images
-        let beachImage1 = UIImage(named: "elnido.jpg")
-        let beachImage2 = UIImage(named: "honokalani.jpg")
-        let beachImage3 = UIImage(named: "pansyisland.jpg")
-        let beachImage4 = UIImage(named: "anselazio.jpg")
-        let beachImage5 = UIImage(named: "honopu.jpg")
-        let beachImage6 = UIImage(named: "oahu.jpg")
-        
-        
         // Build the custom vacation objects
-        let beachArray1 = Vacations(name: "El Nido", image: beachImage1, location: "Palawan, Philippines")
-        let beachArray2 = Vacations(name: "Honokalani Beach", image: beachImage2, location: "Maui, HI")
-        let beachArray3 = Vacations(name: "Pansy Island", image: beachImage3, location: "Archipelago, Mozambique")
-        let beachArray4 = Vacations(name: "Anse Lazio", image: beachImage4, location: "Praslin, Seychelles")
-        let beachArray5 = Vacations(name: "Honopu Beach", image: beachImage5, location: "Kauai, HI")
-        let beachArray6 = Vacations(name: "Sunset Beach", image: beachImage6, location: "Oahu, HI")
+        let beachArray1 = Vacations(name: "El Nido", image: UIImage(named: "elnido.jpg"), location: "Palawan, Philippines")
+        let beachArray2 = Vacations(name: "Honokalani Beach", image: UIImage(named: "honokalani.jpg"), location: "Maui, HI")
+        let beachArray3 = Vacations(name: "Pansy Island", image: UIImage(named: "pansyisland.jpg"), location: "Archipelago, Mozambique")
+        let beachArray4 = Vacations(name: "Anse Lazio", image: UIImage(named: "anselazio.jpg"), location: "Praslin, Seychelles")
+        let beachArray5 = Vacations(name: "Honopu Beach", image: UIImage(named: "honopu.jpg"), location: "Kauai, HI")
+        let beachArray6 = Vacations(name: "Sunset Beach", image: UIImage(named: "oahu.jpg"), location: "Oahu, HI")
         
         vacations = [beachArray1, beachArray2, beachArray3, beachArray4, beachArray5, beachArray6]
         
         
         // MARK: Section 2
         
-        let skiImage1 = UIImage(named: "deervalleyresort.jpg")
-        let skiImage2 = UIImage(named: "telluride.jpg")
-        let skiImage3 = UIImage(named: "aspen.jpg")
-        let skiImage4 = UIImage(named: "santafe.jpg")
-        let skiImage5 = UIImage(named: "jackson.jpg")
-        let skiImage6 = UIImage(named: "whistler.jpg")
-        
-        let skiArray1 = Vacations(name: "Deer Valley Resort", image: skiImage1, location: "Deer Valley, UT")
-        let skiArray2 = Vacations(name: "Telluride Ski Resort", image: skiImage2, location: "Telluride, CO")
-        let skiArray3 = Vacations(name: "Aspen Ski Resort", image: skiImage3, location: "Aspen Mountain, CO")
-        let skiArray4 = Vacations(name: "Ski Santa Fe", image: skiImage4, location: "Santa Fe, NM")
-        let skiArray5 = Vacations(name: "Snake River Lodge", image: skiImage5, location: "Jackson Hole, WY")
-        let skiArray6 = Vacations(name: "Whistler Blackcomb", image: skiImage6, location: "British Columbia, Canada")
+        let skiArray1 = Vacations(name: "Deer Valley Resort", image: UIImage(named: "deervalleyresort.jpg"), location: "Deer Valley, UT")
+        let skiArray2 = Vacations(name: "Telluride Ski Resort", image: UIImage(named: "telluride.jpg"), location: "Telluride, CO")
+        let skiArray3 = Vacations(name: "Aspen Ski Resort", image: UIImage(named: "aspen.jpg"), location: "Aspen Mountain, CO")
+        let skiArray4 = Vacations(name: "Ski Santa Fe", image: UIImage(named: "santafe.jpg"), location: "Santa Fe, NM")
+        let skiArray5 = Vacations(name: "Snake River Lodge", image: UIImage(named: "jackson.jpg"), location: "Jackson Hole, WY")
+        let skiArray6 = Vacations(name: "Whistler Blackcomb", image: UIImage(named: "whistler.jpg"), location: "British Columbia, Canada")
         
         vacation2 = [skiArray1, skiArray2, skiArray3, skiArray4, skiArray5, skiArray6]
         
