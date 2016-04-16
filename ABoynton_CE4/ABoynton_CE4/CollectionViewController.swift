@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 // MARK: Properties
 
 // Global identifier
@@ -22,6 +23,7 @@ class CollectionViewController: UICollectionViewController {
     var sportArray = []
     var workArray = []
     var toyArray = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,15 +57,26 @@ class CollectionViewController: UICollectionViewController {
         workArray = [workArray1, workArray2, workArray3, workArray4, workArray5, workArray6]
         toyArray = [toyArray1, toyArray2, toyArray3, toyArray4, toyArray5, toyArray6]
         
+        
+        self.clearsSelectionOnViewWillAppear = false
+        
+        // Register cell classes
+        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     // MARK: UICollectionViewDataSource
-    
+
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 3
     }
-    
-    
+
+
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // Returning the count of the arrays depending which section you are in
         if section == 0 {
@@ -76,8 +89,8 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! CollectionViewCell
-        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath)
+    
         // If statement determines which data is being sent to the corresponding section
         if indexPath.section == 0 {
             
@@ -111,7 +124,7 @@ class CollectionViewController: UICollectionViewController {
     }
     
     // Create view for header
-    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, forIndexPath: indexPath) as! CollectionReusableView
         
         // Using an if/else to designate between sections
@@ -123,11 +136,14 @@ class CollectionViewController: UICollectionViewController {
             headerView.groupName.text = "Toy Group"
         }
         return headerView
+        
     }
+    
+    // MARK: Delete controls
     
     // Action button for deleting sections
     @IBAction func deleteButton(sender: UIButton) {
         
-        
+        collectionView?.deleteSections(NSIndexSet(index: 0))
     }
 }
