@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0965BCA71CC03CDC00FB74E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BCA61CC03CDC00FB74E5 /* AppDelegate.swift */; };
-		0965BCAE1CC03CDC00FB74E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0965BCAD1CC03CDC00FB74E5 /* Assets.xcassets */; };
-		0965BCBB1CC03E7900FB74E5 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BCB81CC03E7900FB74E5 /* CustomViewController.swift */; };
-		0965BCBC1CC03E7900FB74E5 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BCB91CC03E7900FB74E5 /* NavViewController.swift */; };
-		0965BCBD1CC03E7900FB74E5 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BCBA1CC03E7900FB74E5 /* PickerViewController.swift */; };
-		0965BCC31CC03EF700FB74E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0965BCBF1CC03EF700FB74E5 /* LaunchScreen.storyboard */; };
-		0965BCC41CC03EF700FB74E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0965BCC11CC03EF700FB74E5 /* Main.storyboard */; };
-		0965BCC61CC045F900FB74E5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965BCC51CC045F900FB74E5 /* Game.swift */; };
+		0995FC8B1CC52B3D00D77ECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995FC8A1CC52B3D00D77ECE /* AppDelegate.swift */; };
+		0995FCA31CC52B8700D77ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0995FC9C1CC52B8700D77ECE /* Assets.xcassets */; };
+		0995FCA41CC52B8700D77ECE /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995FC9D1CC52B8700D77ECE /* CustomViewController.swift */; };
+		0995FCA51CC52B8700D77ECE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995FC9E1CC52B8700D77ECE /* Game.swift */; };
+		0995FCA61CC52B8700D77ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0995FC9F1CC52B8700D77ECE /* LaunchScreen.storyboard */; };
+		0995FCA71CC52B8700D77ECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0995FCA01CC52B8700D77ECE /* Main.storyboard */; };
+		0995FCA81CC52B8700D77ECE /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995FCA11CC52B8700D77ECE /* NavViewController.swift */; };
+		0995FCA91CC52B8700D77ECE /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0995FCA21CC52B8700D77ECE /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0965BCA31CC03CDC00FB74E5 /* ABoynton_CE3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABoynton_CE3.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0965BCA61CC03CDC00FB74E5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0965BCAD1CC03CDC00FB74E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0965BCB21CC03CDC00FB74E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0965BCB81CC03E7900FB74E5 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomViewController.swift; path = ../../ABoynton_CE3_1/ABoynton_CE3_1/CustomViewController.swift; sourceTree = "<group>"; };
-		0965BCB91CC03E7900FB74E5 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavViewController.swift; path = ../../ABoynton_CE3_1/ABoynton_CE3_1/NavViewController.swift; sourceTree = "<group>"; };
-		0965BCBA1CC03E7900FB74E5 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = ../../ABoynton_CE3_1/ABoynton_CE3_1/PickerViewController.swift; sourceTree = "<group>"; };
-		0965BCC01CC03EF700FB74E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0965BCC21CC03EF700FB74E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		0965BCC51CC045F900FB74E5 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0995FC871CC52B3D00D77ECE /* ABoynton_CE3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABoynton_CE3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0995FC8A1CC52B3D00D77ECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0995FC961CC52B3D00D77ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0995FC9C1CC52B8700D77ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0995FC9D1CC52B8700D77ECE /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		0995FC9E1CC52B8700D77ECE /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0995FC9F1CC52B8700D77ECE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0995FCA01CC52B8700D77ECE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0995FCA11CC52B8700D77ECE /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		0995FCA21CC52B8700D77ECE /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0965BCA01CC03CDC00FB74E5 /* Frameworks */ = {
+		0995FC841CC52B3D00D77ECE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,48 +41,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0965BC9A1CC03CDC00FB74E5 = {
+		0995FC7E1CC52B3D00D77ECE = {
 			isa = PBXGroup;
 			children = (
-				0965BCA51CC03CDC00FB74E5 /* ABoynton_CE3 */,
-				0965BCA41CC03CDC00FB74E5 /* Products */,
+				0995FC891CC52B3D00D77ECE /* ABoynton_CE3 */,
+				0995FC881CC52B3D00D77ECE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0965BCA41CC03CDC00FB74E5 /* Products */ = {
+		0995FC881CC52B3D00D77ECE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0965BCA31CC03CDC00FB74E5 /* ABoynton_CE3.app */,
+				0995FC871CC52B3D00D77ECE /* ABoynton_CE3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0965BCA51CC03CDC00FB74E5 /* ABoynton_CE3 */ = {
+		0995FC891CC52B3D00D77ECE /* ABoynton_CE3 */ = {
 			isa = PBXGroup;
 			children = (
-				0965BCA61CC03CDC00FB74E5 /* AppDelegate.swift */,
-				0965BCC51CC045F900FB74E5 /* Game.swift */,
-				0965BCB91CC03E7900FB74E5 /* NavViewController.swift */,
-				0965BCBA1CC03E7900FB74E5 /* PickerViewController.swift */,
-				0965BCB81CC03E7900FB74E5 /* CustomViewController.swift */,
-				0965BCC11CC03EF700FB74E5 /* Main.storyboard */,
-				0965BCAD1CC03CDC00FB74E5 /* Assets.xcassets */,
-				0965BCBF1CC03EF700FB74E5 /* LaunchScreen.storyboard */,
-				0965BCB21CC03CDC00FB74E5 /* Info.plist */,
+				0995FCAD1CC52C5100D77ECE /* App */,
+				0995FCAE1CC52C5F00D77ECE /* Resources */,
+				0995FCAC1CC52C4400D77ECE /* Storyboards */,
+				0995FCAB1CC52C3100D77ECE /* Protocols */,
+				0995FCAA1CC52C2200D77ECE /* ViewControllers */,
 			);
 			path = ABoynton_CE3;
+			sourceTree = "<group>";
+		};
+		0995FCAA1CC52C2200D77ECE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0995FC9D1CC52B8700D77ECE /* CustomViewController.swift */,
+				0995FCA11CC52B8700D77ECE /* NavViewController.swift */,
+				0995FCA21CC52B8700D77ECE /* PickerViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0995FCAB1CC52C3100D77ECE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0995FC9E1CC52B8700D77ECE /* Game.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		0995FCAC1CC52C4400D77ECE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0995FC9F1CC52B8700D77ECE /* LaunchScreen.storyboard */,
+				0995FCA01CC52B8700D77ECE /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		0995FCAD1CC52C5100D77ECE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0995FC8A1CC52B3D00D77ECE /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		0995FCAE1CC52C5F00D77ECE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0995FC9C1CC52B8700D77ECE /* Assets.xcassets */,
+				0995FC961CC52B3D00D77ECE /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0965BCA21CC03CDC00FB74E5 /* ABoynton_CE3 */ = {
+		0995FC861CC52B3D00D77ECE /* ABoynton_CE3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0965BCB51CC03CDC00FB74E5 /* Build configuration list for PBXNativeTarget "ABoynton_CE3" */;
+			buildConfigurationList = 0995FC991CC52B3D00D77ECE /* Build configuration list for PBXNativeTarget "ABoynton_CE3" */;
 			buildPhases = (
-				0965BC9F1CC03CDC00FB74E5 /* Sources */,
-				0965BCA01CC03CDC00FB74E5 /* Frameworks */,
-				0965BCA11CC03CDC00FB74E5 /* Resources */,
+				0995FC831CC52B3D00D77ECE /* Sources */,
+				0995FC841CC52B3D00D77ECE /* Frameworks */,
+				0995FC851CC52B3D00D77ECE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,26 +130,26 @@
 			);
 			name = ABoynton_CE3;
 			productName = ABoynton_CE3;
-			productReference = 0965BCA31CC03CDC00FB74E5 /* ABoynton_CE3.app */;
+			productReference = 0995FC871CC52B3D00D77ECE /* ABoynton_CE3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0965BC9B1CC03CDC00FB74E5 /* Project object */ = {
+		0995FC7F1CC52B3D00D77ECE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Full Sail";
 				TargetAttributes = {
-					0965BCA21CC03CDC00FB74E5 = {
+					0995FC861CC52B3D00D77ECE = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 979TTQWNS8;
 					};
 				};
 			};
-			buildConfigurationList = 0965BC9E1CC03CDC00FB74E5 /* Build configuration list for PBXProject "ABoynton_CE3" */;
+			buildConfigurationList = 0995FC821CC52B3D00D77ECE /* Build configuration list for PBXProject "ABoynton_CE3" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -117,67 +157,46 @@
 				en,
 				Base,
 			);
-			mainGroup = 0965BC9A1CC03CDC00FB74E5;
-			productRefGroup = 0965BCA41CC03CDC00FB74E5 /* Products */;
+			mainGroup = 0995FC7E1CC52B3D00D77ECE;
+			productRefGroup = 0995FC881CC52B3D00D77ECE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0965BCA21CC03CDC00FB74E5 /* ABoynton_CE3 */,
+				0995FC861CC52B3D00D77ECE /* ABoynton_CE3 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0965BCA11CC03CDC00FB74E5 /* Resources */ = {
+		0995FC851CC52B3D00D77ECE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0965BCC41CC03EF700FB74E5 /* Main.storyboard in Resources */,
-				0965BCAE1CC03CDC00FB74E5 /* Assets.xcassets in Resources */,
-				0965BCC31CC03EF700FB74E5 /* LaunchScreen.storyboard in Resources */,
+				0995FCA71CC52B8700D77ECE /* Main.storyboard in Resources */,
+				0995FCA31CC52B8700D77ECE /* Assets.xcassets in Resources */,
+				0995FCA61CC52B8700D77ECE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0965BC9F1CC03CDC00FB74E5 /* Sources */ = {
+		0995FC831CC52B3D00D77ECE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0965BCA71CC03CDC00FB74E5 /* AppDelegate.swift in Sources */,
-				0965BCC61CC045F900FB74E5 /* Game.swift in Sources */,
-				0965BCBC1CC03E7900FB74E5 /* NavViewController.swift in Sources */,
-				0965BCBD1CC03E7900FB74E5 /* PickerViewController.swift in Sources */,
-				0965BCBB1CC03E7900FB74E5 /* CustomViewController.swift in Sources */,
+				0995FCA91CC52B8700D77ECE /* PickerViewController.swift in Sources */,
+				0995FC8B1CC52B3D00D77ECE /* AppDelegate.swift in Sources */,
+				0995FCA51CC52B8700D77ECE /* Game.swift in Sources */,
+				0995FCA81CC52B8700D77ECE /* NavViewController.swift in Sources */,
+				0995FCA41CC52B8700D77ECE /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		0965BCBF1CC03EF700FB74E5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0965BCC01CC03EF700FB74E5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = ../../ABoynton_CE3_1/ABoynton_CE3_1/Base.lproj;
-			sourceTree = "<group>";
-		};
-		0965BCC11CC03EF700FB74E5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0965BCC21CC03EF700FB74E5 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../../ABoynton_CE3_1/ABoynton_CE3_1/Base.lproj;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		0965BCB31CC03CDC00FB74E5 /* Debug */ = {
+		0995FC971CC52B3D00D77ECE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +241,7 @@
 			};
 			name = Debug;
 		};
-		0965BCB41CC03CDC00FB74E5 /* Release */ = {
+		0995FC981CC52B3D00D77ECE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,7 +279,7 @@
 			};
 			name = Release;
 		};
-		0965BCB61CC03CDC00FB74E5 /* Debug */ = {
+		0995FC9A1CC52B3D00D77ECE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -271,7 +290,7 @@
 			};
 			name = Debug;
 		};
-		0965BCB71CC03CDC00FB74E5 /* Release */ = {
+		0995FC9B1CC52B3D00D77ECE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -285,25 +304,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0965BC9E1CC03CDC00FB74E5 /* Build configuration list for PBXProject "ABoynton_CE3" */ = {
+		0995FC821CC52B3D00D77ECE /* Build configuration list for PBXProject "ABoynton_CE3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0965BCB31CC03CDC00FB74E5 /* Debug */,
-				0965BCB41CC03CDC00FB74E5 /* Release */,
+				0995FC971CC52B3D00D77ECE /* Debug */,
+				0995FC981CC52B3D00D77ECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0965BCB51CC03CDC00FB74E5 /* Build configuration list for PBXNativeTarget "ABoynton_CE3" */ = {
+		0995FC991CC52B3D00D77ECE /* Build configuration list for PBXNativeTarget "ABoynton_CE3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0965BCB61CC03CDC00FB74E5 /* Debug */,
-				0965BCB71CC03CDC00FB74E5 /* Release */,
+				0995FC9A1CC52B3D00D77ECE /* Debug */,
+				0995FC9B1CC52B3D00D77ECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0965BC9B1CC03CDC00FB74E5 /* Project object */;
+	rootObject = 0995FC7F1CC52B3D00D77ECE /* Project object */;
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0965BCA21CC03CDC00FB74E5"
+               BlueprintIdentifier = "0995FC861CC52B3D00D77ECE"
                BuildableName = "ABoynton_CE3.app"
                BlueprintName = "ABoynton_CE3"
                ReferencedContainer = "container:ABoynton_CE3.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0965BCA21CC03CDC00FB74E5"
+            BlueprintIdentifier = "0995FC861CC52B3D00D77ECE"
             BuildableName = "ABoynton_CE3.app"
             BlueprintName = "ABoynton_CE3"
             ReferencedContainer = "container:ABoynton_CE3.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0965BCA21CC03CDC00FB74E5"
+            BlueprintIdentifier = "0995FC861CC52B3D00D77ECE"
             BuildableName = "ABoynton_CE3.app"
             BlueprintName = "ABoynton_CE3"
             ReferencedContainer = "container:ABoynton_CE3.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0965BCA21CC03CDC00FB74E5"
+            BlueprintIdentifier = "0995FC861CC52B3D00D77ECE"
             BuildableName = "ABoynton_CE3.app"
             BlueprintName = "ABoynton_CE3"
             ReferencedContainer = "container:ABoynton_CE3.xcodeproj">
