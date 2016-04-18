@@ -10,34 +10,86 @@ import UIKit
 
 // MARK: Properties
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
-    // Stored properties
-    var filteredSearch: [SearchItems] = []
+    var searchItems = [SearchItems]()
+    var filteredSearch = [SearchItems]()
     
     var searchController = UISearchController(searchResultsController: nil)
     
-    // Outlet for the display of tableView
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: TableViewDataSource
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // MARK: SearchController
+        
+        navigationItem.title = "Search"
+        
+        // MARK: TableViewDataSource
+        
+        // Custom object array
+        searchItems = [
+            SearchItems(name: "Brittany", group: "Sporting Group"),
+            SearchItems(name: "Chesapeake Bay Retriever", group: "Sporting Group"),
+            SearchItems(name: "Cocker Spaniel", group: "Sporting Group"),
+            SearchItems(name: "Golden Retriever", group: "Sporting Group"),
+            SearchItems(name: "Irish Setter", group: "Sporting Group"),
+            SearchItems(name: "Labrador Retriever", group: "Sporting Group"),
+            SearchItems(name: "Alaskan Malamute", group: "Working Group"),
+            SearchItems(name: "Boerboel", group: "Working Group"),
+            SearchItems(name: "Boxer", group: "Working Group"),
+            SearchItems(name: "Cane Corso", group: "Working Group"),
+            SearchItems(name: "Doberman Pinscher", group: "Working Group"),
+            SearchItems(name: "Rottweiler", group: "Working Group")
+        ]
+        
+        
+        // Configure to recieve updates
+        searchController.searchResultsUpdater = self
+        
+        // SearchController setup
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        
+        // SearchBar setup
+        searchController.searchBar.scopeButtonTitles = ["All", "Sporting Group", "Working Group"]
+        searchController.searchBar.delegate = self
+        
+        // Adds searchBar to the tableView
+        tableView.tableHeaderView = searchController.searchBar
+        
+        // Possible bug fix
+        searchController.searchBar.sizeToFit()
+        
+    }
     
-    // Custom object array
-    let searchItems = [
-        SearchItems(name: "Brittany", group: "Sporting Group"),
-        SearchItems(name: "Chesapeake Bay Retriever", group: "Sporting Group"),
-        SearchItems(name: "Cocker Spaniel", group: "Sporting Group"),
-        SearchItems(name: "Golden Retriever", group: "Sporting Group"),
-        SearchItems(name: "Irish Setter", group: "Sporting Group"),
-        SearchItems(name: "Labrador Retriever", group: "Sporting Group"),
-        SearchItems(name: "Alaskan Malamute", group: "Working Group"),
-        SearchItems(name: "Boerboel", group: "Working Group"),
-        SearchItems(name: "Boxer", group: "Working Group"),
-        SearchItems(name: "Cane Corso", group: "Working Group"),
-        SearchItems(name: "Doberman Pinscher", group: "Working Group"),
-        SearchItems(name: "Rottweiler", group: "Working Group")
-    ]
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        if searchText.isEmpty == false {
+            filteredSearch = searchItems.filter { candy in
+            return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        
+        tableView.reloadData()
+}
+        
+// MARK: UISearchResultsUpdating
     
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+        }
+    }
+    
+    // Function to determine how many cell rows are present
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // if statement counts the array displayed whether it is filtered or not
+        if searchController.active {
+            filteredSearch.count
+        }
+        return searchItems.count
+    }
+
     // Function to determine how many cells to be passed in
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath:indexPath)
@@ -51,47 +103,14 @@ class SearchViewController: UIViewController {
         return cell
     }
     
-    // Function to determine how many cell rows are present
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // if statement counts the array displayed whether it is filtered or not
-        if searchController.active {
-            filteredSearch.count
-        }
-        return searchItems.count
-    }
 }
 
 
-// MARK: UISearchResultsUpdating
 
-extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // MARK: SearchController
-        
-        navigationItem.title = "Search"
-        
-        // SearchController setup
-        searchController.dimsBackgroundDuringPresentation = false
-        self.definesPresentationContext = true
-        
-        // Configure to recieve updates
-        searchController.searchResultsUpdater = self
-        
-        // SearchBar setup
-        searchController.searchBar.scopeButtonTitles = ["All", "Sporting Group", "Working Group"]
-        searchController.searchBar.delegate = self
-        
-        // Adds searchBar to the tableView
-        tableView.tableHeaderView = searchController.searchBar
-        
-        // Possible bug fix
-        searchController.searchBar.sizeToFit()
 
-    }
+extension SearchViewController: UISearchResultsUpdating {
     
+        
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
         // Determines what the user typed and what scope is
@@ -103,9 +122,9 @@ extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
         filteredSearch = searchItems // Allows the table to be populated upon initiation
         
         // Only if there is text, the titles will begin to be filtered
-        if searchText.isEmpty == false {
+        
             filteredSearch = searchItems.filter { (searchItem) -> Bool in
-                (searchItem.name?.lowercaseString.containsString(searchText.lowercaseString))!
+                searchItem.name!.lowercaseString.containsString(searchText.lowercaseString)
             }
         }
         
@@ -122,9 +141,9 @@ extension SearchViewController: UISearchResultsUpdating, UISearchBarDelegate {
         tableView.reloadData()
     }
     
-    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        <#code#>
-    }
+//    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+//        <#code#>
+//    }
     
     // MARK: UISearchBarDelegate
 
