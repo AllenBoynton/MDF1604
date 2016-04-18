@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="683.5" y="476.5"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="NWL-am-Co9">
             <objects>
-                <viewController id="fTX-GQ-EDE" customClass="SearchViewController" customModule="ABoynton_CE5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fTX-GQ-EDE" customClass="TableViewController" customModule="ABoynton_CE5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfS-gY-v2f"/>
                         <viewControllerLayoutGuide type="bottom" id="6N4-an-Fkc"/>
@@ -86,7 +86,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUm-jU-VG3">
                                                     <rect key="frame" x="8" y="10" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -94,8 +94,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="fTX-GQ-EDE" id="iY0-Xa-AAe"/>
-                                    <outlet property="delegate" destination="fTX-GQ-EDE" id="oJu-Zq-dpp"/>
+                                    <outlet property="dataSource" destination="fTX-GQ-EDE" id="QMY-sA-wwu"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -105,7 +104,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="BhT-iJ-mSU" id="hKs-2h-zIj"/>
-                        <outlet property="tableView" destination="P5J-4v-1CZ" id="LfX-ef-SDQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orO-WX-fS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
