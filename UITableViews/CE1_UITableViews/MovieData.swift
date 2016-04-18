@@ -15,13 +15,11 @@ struct MovieData {
     var title: String
     var name:  String
     var date:  String
-    var image: UIImage?
     
     // Init that allows the use of values to the stored properties
-    init(title: String, name: String, date: String, image: UIImage?) {
+    init(title: String, name: String, date: String) {
         self.title = title
         self.name  = name
         self.date  = date
-        self.image = image
     }
 }

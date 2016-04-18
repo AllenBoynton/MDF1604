@@ -14,7 +14,6 @@
 		098B81F11CB60B0700904F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098B81EF1CB60B0700904F1E /* LaunchScreen.storyboard */; };
 		098B81F91CB60CFC00904F1E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B81F81CB60CFC00904F1E /* DetailViewController.swift */; };
 		098B81FB1CB60E3C00904F1E /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B81FA1CB60E3C00904F1E /* MovieData.swift */; };
-		098B81FF1CB8BD4A00904F1E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B81FE1CB8BD4A00904F1E /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		098B81F21CB60B0700904F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		098B81F81CB60CFC00904F1E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		098B81FA1CB60E3C00904F1E /* MovieData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
-		098B81FE1CB8BD4A00904F1E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +39,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		097480391CC4ACC200B4F8C6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				098B81F81CB60CFC00904F1E /* DetailViewController.swift */,
+				098B81E81CB60B0700904F1E /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0974803A1CC4ACD800B4F8C6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				098B81E61CB60B0700904F1E /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		0974803B1CC4ACE500B4F8C6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				098B81FA1CB60E3C00904F1E /* MovieData.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		0974803C1CC4ACFA00B4F8C6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				098B81EA1CB60B0700904F1E /* Main.storyboard */,
+				098B81EF1CB60B0700904F1E /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		0974803D1CC4AD1400B4F8C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				098B81ED1CB60B0700904F1E /* Assets.xcassets */,
+				098B81F21CB60B0700904F1E /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		098B81DA1CB60B0700904F1E = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +101,11 @@
 		098B81E51CB60B0700904F1E /* CE1_UITableViews */ = {
 			isa = PBXGroup;
 			children = (
-				098B81E61CB60B0700904F1E /* AppDelegate.swift */,
-				098B81FA1CB60E3C00904F1E /* MovieData.swift */,
-				098B81E81CB60B0700904F1E /* ViewController.swift */,
-				098B81F81CB60CFC00904F1E /* DetailViewController.swift */,
-				098B81EA1CB60B0700904F1E /* Main.storyboard */,
-				098B81ED1CB60B0700904F1E /* Assets.xcassets */,
-				098B81EF1CB60B0700904F1E /* LaunchScreen.storyboard */,
-				098B81F21CB60B0700904F1E /* Info.plist */,
-				098B81FE1CB8BD4A00904F1E /* TableViewController.swift */,
+				0974803A1CC4ACD800B4F8C6 /* App */,
+				0974803D1CC4AD1400B4F8C6 /* Resources */,
+				0974803C1CC4ACFA00B4F8C6 /* Storyboards */,
+				0974803B1CC4ACE500B4F8C6 /* Protocols */,
+				097480391CC4ACC200B4F8C6 /* ViewControllers */,
 			);
 			path = CE1_UITableViews;
 			sourceTree = "<group>";
@@ -148,7 +185,6 @@
 				098B81FB1CB60E3C00904F1E /* MovieData.swift in Sources */,
 				098B81F91CB60CFC00904F1E /* DetailViewController.swift in Sources */,
 				098B81E91CB60B0700904F1E /* ViewController.swift in Sources */,
-				098B81FF1CB8BD4A00904F1E /* TableViewController.swift in Sources */,
 				098B81E71CB60B0700904F1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

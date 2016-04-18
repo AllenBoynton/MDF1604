@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Brittany</string>
+		<key>group</key>
+		<string>Sporting Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chesapeake Bay Retriever</string>
+		<key>group</key>
+		<string>Sporting Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cocker Spaniel</string>
+		<key>group</key>
+		<string>Sporting Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Golden Retriever</string>
+		<key>group</key>
+		<string>Sporting Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Irish Setter</string>
+		<key>group</key>
+		<string>Sporting Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Labrador Retriever</string>
+		<key>group</key>
+		<string>Sporting Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Alaskan Malamute</string>
+		<key>group</key>
+		<string>Working Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Boerboel</string>
+		<key>group</key>
+		<string>Working Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Boxer</string>
+		<key>group</key>
+		<string>Working Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cane Corso</string>
+		<key>group</key>
+		<string>Working Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Doberman Pinscher</string>
+		<key>group</key>
+		<string>Working Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rottweiler</string>
+		<key>group</key>
+		<string>Working Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chihuahua</string>
+		<key>group</key>
+		<string>Toy Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Italian Greyhound</string>
+		<key>group</key>
+		<string>Toy Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Maltese</string>
+		<key>group</key>
+		<string>Toy Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Miniature Pinscher</string>
+		<key>group</key>
+		<string>Toy Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pomeranian</string>
+		<key>group</key>
+		<string>Toy Group</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pug</string>
+		<key>group</key>
+		<string>Toy Group</string>
+	</dict>
+</array>
+</plist>

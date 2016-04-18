@@ -9,16 +9,15 @@
 import UIKit
 
 
-// Created class for label and image view within the collection cells
+// Created class for plist data to view within the collection cells
 class DogGroups {
     
-    var dog: String
-    var image: UIImage?
+    var name:  String?
+    var group: String?
     
-    // Initiators for cell label and image
-    init(dog: String, image: UIImage?) {
-        self.dog = dog
-        self.image = image
+    // Initiators for cell label and group
+    init(name: String, group: String) {
+        self.name  = name
+        self.group = group
     }
-    
 }

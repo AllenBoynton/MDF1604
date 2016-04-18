@@ -13,33 +13,26 @@ import UIKit
 // Private Global Constant Identifier
 private let cellIdentifier = "myCell"
 
-class ViewController: UIViewController, UITableViewDataSource, UITextViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource {
     
     // Array holds all movie data
-    var movieArray: [MovieData] = []
+    var movieArrays: [MovieData] = []
     
     // Connects table view to code
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Get the images
-        let movieImage1 = UIImage(named: "batmanVsuperman.jpg")
-        let movieImage2 = UIImage(named: "zootopia.jpg")
-        let movieImage3 = UIImage(named: "mybigfatgreekwedding2.jpg")
-        let movieImage4 = UIImage(named: "godsnotdeadtwo.jpg")
-        let movieImage5 = UIImage(named: "miraclesfromheaven.jpg")
-        
-        // Build the custom movie objects
-        let movieArray1 = MovieData(title: "Batman v Superman", name: "Ben Affleck & Henry Cavill", date: "March 25, 2016", image: movieImage1)
-        let movieArray2 = MovieData(title: "Zootopia", name: "Ginnifer Goodwin & Jason Bateman", date: "March 4, 2016", image: movieImage2)
-        let movieArray3 = MovieData(title: "My Big Fat Greek Wedding 2", name: "Nia Varalos & John Corbett", date: "March 25, 2016", image: movieImage3)
-        let movieArray4 = MovieData(title: "God's Not Dead 2", name: "Melissa Joan Hart & Jesse Metcalfe", date: "April 1, 2016", image: movieImage4)
-        let movieArray5 = MovieData(title: "Miracles from Heaven", name: "Jennifer Garner", date: "March 16, 2016", image: movieImage5)
-        
-        movieArray = [movieArray1, movieArray2, movieArray3, movieArray4, movieArray5]
     }
+    
+    // Build the custom movie objects
+    let movieArray = [
+        MovieData(title: "Batman v Superman", name: "Ben Affleck & Henry Cavill", date: "March 25, 2016"),
+        MovieData(title: "Zootopia", name: "Ginnifer Goodwin & Jason Bateman", date: "March 4, 2016"),
+        MovieData(title: "My Big Fat Greek Wedding 2", name: "Nia Varalos & John Corbett", date: "March 25, 2016"),
+        MovieData(title: "God's Not Dead 2", name: "Melissa Joan Hart & Jesse Metcalfe", date: "April 1, 2016"),
+        MovieData(title: "Miracles from Heaven", name: "Jennifer Garner", date: "March 16, 2016")
+    ]
     
     // MARK: Table view data source
     

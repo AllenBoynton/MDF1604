@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ANm-9o-m00">
             <objects>
-                <viewController id="JKK-6e-KUB" customClass="CollectionViewController" customModule="ABoynton_CE4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JKK-6e-KUB" customClass="MainViewController" customModule="ABoynton_CE4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oPf-LV-utr"/>
                         <viewControllerLayoutGuide type="bottom" id="RqJ-CU-xd9"/>
@@ -44,14 +44,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="181" height="176"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlightedImage="dirt" translatesAutoresizingMaskIntoConstraints="NO" id="iCa-Vn-QsE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlightedImage="dirt" translatesAutoresizingMaskIntoConstraints="NO" id="iCa-Vn-QsE" userLabel="BG Image View">
                                                     <rect key="frame" x="0.0" y="0.0" width="181" height="176"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wT5-a1-fHd" userLabel="Dog Image View">
                                                     <rect key="frame" x="23" y="8" width="135" height="135"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RzO-Br-SDk" userLabel="Cell Title">
-                                                    <rect key="frame" x="11" y="151" width="158" height="25"/>
+                                                    <rect key="frame" x="11" y="143" width="158" height="25"/>
                                                     <color key="backgroundColor" red="0.068425372240000004" green="0.74635579139999997" blue="0.32988222969999997" alpha="0.79848500844594594" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,8 +63,8 @@
                                         <color key="backgroundColor" white="1" alpha="0.34694362330270268" colorSpace="calibratedWhite"/>
                                         <size key="customSize" width="181" height="176"/>
                                         <connections>
-                                            <outlet property="dogImageView" destination="wT5-a1-fHd" id="aw8-Fs-fIP"/>
-                                            <outlet property="dogLabelView" destination="RzO-Br-SDk" id="J7T-cd-F5g"/>
+                                            <outlet property="dogImageView" destination="wT5-a1-fHd" id="9P8-vB-H9l"/>
+                                            <outlet property="dogLabelView" destination="RzO-Br-SDk" id="0mk-JD-j6I"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -80,7 +80,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="deleteButton:" destination="JKK-6e-KUB" eventType="touchUpInside" id="mot-b7-k2X"/>
+                                                <action selector="deleteSection:" destination="JKK-6e-KUB" eventType="touchUpInside" id="7NY-Nj-Nvt"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-4x-trA">
@@ -92,21 +92,25 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.1215686275" green="0.57254901960000004" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <outlet property="groupName" destination="PlD-4x-trA" id="xnd-0t-mX8"/>
+                                        <outlet property="deleteButton" destination="Oym-dd-rYh" id="LXQ-Uu-rWK"/>
+                                        <outlet property="groupName" destination="PlD-4x-trA" id="unZ-oU-9jn"/>
                                     </connections>
                                 </collectionReusableView>
                                 <connections>
-                                    <outlet property="dataSource" destination="JKK-6e-KUB" id="ySi-zz-P4X"/>
+                                    <outlet property="dataSource" destination="JKK-6e-KUB" id="Odx-wz-ana"/>
                                 </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0cU-yj-VFd" id="k37-7E-Myw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ5-gf-B8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519.5" y="378.5"/>
+            <point key="canvasLocation" x="200.5" y="252.5"/>
         </scene>
     </scenes>
     <resources>

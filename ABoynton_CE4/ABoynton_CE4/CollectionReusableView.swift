@@ -10,10 +10,11 @@ import UIKit
 
 // MARK: Properties
 
-// Class created to open outlet for section label
+// Class created to open outlet for section label in header
 class CollectionReusableView: UICollectionReusableView {
     
     // Outlet to create label name for the header
     @IBOutlet weak var groupName: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     
 }

@@ -25,7 +25,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         navigationItem.title = selectedMovie!.title
         
         // Display images and text for labels in the detailView
-        imageView.image = selectedMovie!.image
+        imageView.image = UIImage(named: selectedMovie!.title)
         starringLabel.text = "Starring: \(selectedMovie!.name)"
         dateLabel.text = "Release Date: \(selectedMovie!.date)"
     }

@@ -14,8 +14,9 @@
 		092412731CC06FBB003B99A6 /* DogGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092412721CC06FBB003B99A6 /* DogGroups.swift */; };
 		092412751CC13660003B99A6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092412741CC13660003B99A6 /* CollectionViewCell.swift */; };
 		092412771CC163BC003B99A6 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092412761CC163BC003B99A6 /* CollectionReusableView.swift */; };
-		092412791CC16654003B99A6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092412781CC16654003B99A6 /* CollectionViewController.swift */; };
-		09747FC41CC1C5F500B4F8C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09747FC31CC1C5F500B4F8C6 /* ViewController.swift */; };
+		097480141CC33AC600B4F8C6 /* DogData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 097480131CC33AC600B4F8C6 /* DogData.plist */; };
+		097480161CC341BD00B4F8C6 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097480151CC341BD00B4F8C6 /* DataSource.swift */; };
+		097480181CC3479000B4F8C6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097480171CC3479000B4F8C6 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		092412721CC06FBB003B99A6 /* DogGroups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogGroups.swift; sourceTree = "<group>"; };
 		092412741CC13660003B99A6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		092412761CC163BC003B99A6 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
-		092412781CC16654003B99A6 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		09747FC31CC1C5F500B4F8C6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		097480131CC33AC600B4F8C6 /* DogData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DogData.plist; sourceTree = "<group>"; };
+		097480151CC341BD00B4F8C6 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		097480171CC3479000B4F8C6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,10 @@
 		0908F42B1CC05FE3004EDFAD /* ABoynton_CE4 */ = {
 			isa = PBXGroup;
 			children = (
-				0908F42C1CC05FE3004EDFAD /* AppDelegate.swift */,
-				0908F4381CC05FE3004EDFAD /* Info.plist */,
-				0908F4331CC05FE3004EDFAD /* Assets.xcassets */,
+				0974801A1CC35A8D00B4F8C6 /* App */,
+				0974801B1CC35ABA00B4F8C6 /* Resources */,
 				0924127D1CC1A5DC003B99A6 /* Storyboards */,
+				097480191CC34EF300B4F8C6 /* plist */,
 				0924127C1CC1A5A6003B99A6 /* Class Initiators */,
 				0924127E1CC1A5F8003B99A6 /* CollectionVCs */,
 				0924127F1CC1A61A003B99A6 /* ViewControllers */,
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				092412721CC06FBB003B99A6 /* DogGroups.swift */,
+				097480151CC341BD00B4F8C6 /* DataSource.swift */,
 			);
 			name = "Class Initiators";
 			sourceTree = "<group>";
@@ -93,8 +96,8 @@
 		0924127E1CC1A5F8003B99A6 /* CollectionVCs */ = {
 			isa = PBXGroup;
 			children = (
-				092412741CC13660003B99A6 /* CollectionViewCell.swift */,
 				092412761CC163BC003B99A6 /* CollectionReusableView.swift */,
+				092412741CC13660003B99A6 /* CollectionViewCell.swift */,
 			);
 			name = CollectionVCs;
 			sourceTree = "<group>";
@@ -102,10 +105,34 @@
 		0924127F1CC1A61A003B99A6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09747FC31CC1C5F500B4F8C6 /* ViewController.swift */,
-				092412781CC16654003B99A6 /* CollectionViewController.swift */,
+				097480171CC3479000B4F8C6 /* MainViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		097480191CC34EF300B4F8C6 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				0908F4381CC05FE3004EDFAD /* Info.plist */,
+				097480131CC33AC600B4F8C6 /* DogData.plist */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
+		0974801A1CC35A8D00B4F8C6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0908F42C1CC05FE3004EDFAD /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		0974801B1CC35ABA00B4F8C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0908F4331CC05FE3004EDFAD /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +197,7 @@
 				0908F4371CC05FE3004EDFAD /* LaunchScreen.storyboard in Resources */,
 				0908F4341CC05FE3004EDFAD /* Assets.xcassets in Resources */,
 				0908F4321CC05FE3004EDFAD /* Main.storyboard in Resources */,
+				097480141CC33AC600B4F8C6 /* DogData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09747FC41CC1C5F500B4F8C6 /* ViewController.swift in Sources */,
-				092412791CC16654003B99A6 /* CollectionViewController.swift in Sources */,
+				097480181CC3479000B4F8C6 /* MainViewController.swift in Sources */,
+				097480161CC341BD00B4F8C6 /* DataSource.swift in Sources */,
 				092412751CC13660003B99A6 /* CollectionViewCell.swift in Sources */,
 				092412731CC06FBB003B99A6 /* DogGroups.swift in Sources */,
 				092412771CC163BC003B99A6 /* CollectionReusableView.swift in Sources */,

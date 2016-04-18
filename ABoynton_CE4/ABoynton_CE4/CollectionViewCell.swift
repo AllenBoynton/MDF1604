@@ -10,6 +10,7 @@ import UIKit
 
 // MARK: Properties
 
+// Class created to assign outlets to cells
 class CollectionViewCell: UICollectionViewCell {
     
     // Outlets to display data in the cells

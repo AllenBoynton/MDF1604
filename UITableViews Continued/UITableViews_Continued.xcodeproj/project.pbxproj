@@ -43,6 +43,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		097480341CC4A5E000B4F8C6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				098B82241CB9B05900904F1E /* CustomTableViewCell.swift */,
+				098B821E1CB9720500904F1E /* TableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		097480351CC4A5FA00B4F8C6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				098B820C1CB971C600904F1E /* AppDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		097480361CC4A61200B4F8C6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				098B82101CB971C600904F1E /* Main.storyboard */,
+				098B82151CB971C600904F1E /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		097480371CC4A62A00B4F8C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				098B82131CB971C600904F1E /* Assets.xcassets */,
+				098B82181CB971C600904F1E /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		097480381CC4A64D00B4F8C6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				098B82261CB9C38D00904F1E /* CustomHeader.xib */,
+				098B82281CB9C77600904F1E /* CustomHeader.swift */,
+				098B82221CB9757400904F1E /* Vacations.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		098B82001CB971C600904F1E = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +107,11 @@
 		098B820B1CB971C600904F1E /* UITableViews_Continued */ = {
 			isa = PBXGroup;
 			children = (
-				098B820C1CB971C600904F1E /* AppDelegate.swift */,
-				098B82261CB9C38D00904F1E /* CustomHeader.xib */,
-				098B82281CB9C77600904F1E /* CustomHeader.swift */,
-				098B82221CB9757400904F1E /* Vacations.swift */,
-				098B821E1CB9720500904F1E /* TableViewController.swift */,
-				098B82241CB9B05900904F1E /* CustomTableViewCell.swift */,
-				098B82101CB971C600904F1E /* Main.storyboard */,
-				098B82131CB971C600904F1E /* Assets.xcassets */,
-				098B82151CB971C600904F1E /* LaunchScreen.storyboard */,
-				098B82181CB971C600904F1E /* Info.plist */,
+				097480351CC4A5FA00B4F8C6 /* App */,
+				097480371CC4A62A00B4F8C6 /* Resources */,
+				097480361CC4A61200B4F8C6 /* Storyboards */,
+				097480381CC4A64D00B4F8C6 /* Protocols */,
+				097480341CC4A5E000B4F8C6 /* ViewControllers */,
 			);
 			path = UITableViews_Continued;
 			sourceTree = "<group>";
