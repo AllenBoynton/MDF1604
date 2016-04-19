@@ -2,7 +2,7 @@
 //  SearchViewController.swift
 //  ABoynton_CE5
 //
-//  Created by Allen Boynton on 4/16/16.
+//  Created by Allen Boynton on 4/15/16.
 //  Copyright © 2016 Full Sail. All rights reserved.
 //
 
@@ -10,19 +10,18 @@ import UIKit
 
 // MARK: Properties
 
-class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
+class SearchViewController: UIViewController, UISearchBarDelegate {
     
+    // Stored properties
     var searchItems = [SearchItems]()
     var filteredSearch = [SearchItems]()
     
-    var searchController = UISearchController(searchResultsController: nil)
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // MARK: SearchController
         
         navigationItem.title = "Search"
         
@@ -44,7 +43,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
             SearchItems(name: "Rottweiler", group: "Working Group")
         ]
         
-        
         // Configure to recieve updates
         searchController.searchResultsUpdater = self
         
@@ -58,93 +56,80 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         
         // Adds searchBar to the tableView
         tableView.tableHeaderView = searchController.searchBar
-        
+        //
         // Possible bug fix
         searchController.searchBar.sizeToFit()
+        
+        self.definesPresentationContext = true
         
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
-        if searchText.isEmpty == false {
-            filteredSearch = searchItems.filter { candy in
-            return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+        filteredSearch = searchItems.filter { searchItem in
+            let categoryMatch = (scope == "All") || (searchItem.group == scope)
+            return  categoryMatch && searchItem.name.lowercaseString.containsString(searchText.lowercaseString)
         }
         
         tableView.reloadData()
-}
-        
-// MARK: UISearchResultsUpdating
-    
-extension SearchViewController: UISearchResultsUpdating {
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-        }
     }
     
-    // Function to determine how many cell rows are present
+    // MARK: Table View
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // if statement counts the array displayed whether it is filtered or not
-        if searchController.active {
-            filteredSearch.count
+        if searchController.active || searchController.searchBar.text != "" {
+            return filteredSearch.count
         }
         return searchItems.count
     }
-
-    // Function to determine how many cells to be passed in
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath:indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         
-        // if statement counts the array displayed whether it is filtered or not
-        if searchController.active {
-            cell.textLabel?.text = filteredSearch[indexPath.row].name
+        let searchItem: SearchItems
+        if searchController.active && searchController.searchBar.text != "" {
+            searchItem = filteredSearch[indexPath.row]
         } else {
-            cell.textLabel?.text = searchItems[indexPath.row].name
+            searchItem = searchItems[indexPath.row]
         }
+        cell.textLabel!.text = searchItem.name
+        
         return cell
     }
     
-}
-
-
-
-
-extension SearchViewController: UISearchResultsUpdating {
-    
-        
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        
-        // Determines what the user typed and what scope is
-        let searchText = searchController.searchBar.text!
-        let scopeButtonTitles = searchController.searchBar.scopeButtonTitles! // Gets all titles
-        let selectedIndex = searchController.searchBar.selectedScopeButtonIndex // Gets selected scope index
-        let scopeTitle = scopeButtonTitles[selectedIndex] // Gets scope titles
-        
-        filteredSearch = searchItems // Allows the table to be populated upon initiation
-        
-        // Only if there is text, the titles will begin to be filtered
-        
-            filteredSearch = searchItems.filter { (searchItem) -> Bool in
-                searchItem.name!.lowercaseString.containsString(searchText.lowercaseString)
+    // MARK: Segue to details
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == detailSegue {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let searchItem: SearchItems
+                if searchController.active && searchController.searchBar.text != "" {
+                    searchItem = filteredSearch[indexPath.row]
+                } else {
+                    searchItem = searchItems[indexPath.row]
+                }
+                let controller = segue.destinationViewController as! DetailViewController
+                controller.dogDetail = searchItem
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
+    }
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+    }
+
+    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
         
-        // if statement allows search to include all titles
-        if scopeTitle != "All" {
-            
-        } else if scopeTitle == "Sporting Group" {
-            
-        } else {
-            
-        }
-        
-        // Reload data after filtered
-        tableView.reloadData()
     }
     
-//    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-//        <#code#>
-//    }
+    // Returns edited text to VC1 textFields
+    @IBAction func returnEdit(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
-    // MARK: UISearchBarDelegate
-
 }
+                

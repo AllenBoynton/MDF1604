@@ -12,8 +12,10 @@
 		0965BABD1CBEB3F500FB74E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0965BABC1CBEB3F500FB74E5 /* Assets.xcassets */; };
 		0965BAC01CBEB3F500FB74E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0965BABE1CBEB3F500FB74E5 /* LaunchScreen.storyboard */; };
 		0974801D1CC4139400B4F8C6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974801C1CC4139400B4F8C6 /* MainViewController.swift */; };
-		0974801F1CC413CA00B4F8C6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974801E1CC413CA00B4F8C6 /* SearchViewController.swift */; };
 		0974802A1CC42E3200B4F8C6 /* SearchItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097480291CC42E3200B4F8C6 /* SearchItems.swift */; };
+		09C34B011CC5797300478639 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C34B001CC5797300478639 /* SearchViewController.swift */; };
+		09C34B031CC5A2E200478639 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C34B021CC5A2E200478639 /* DetailViewController.swift */; };
+		09C34B051CC5B46C00478639 /* MJ AlGhifari Demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09C34B041CC5B46C00478639 /* MJ AlGhifari Demo.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,10 @@
 		0965BABF1CBEB3F500FB74E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0965BAC11CBEB3F500FB74E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0974801C1CC4139400B4F8C6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0974801E1CC413CA00B4F8C6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		097480291CC42E3200B4F8C6 /* SearchItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItems.swift; sourceTree = "<group>"; };
+		09C34B001CC5797300478639 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		09C34B021CC5A2E200478639 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		09C34B041CC5B46C00478639 /* MJ AlGhifari Demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MJ AlGhifari Demo.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +74,8 @@
 		097480201CC413D800B4F8C6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0974801E1CC413CA00B4F8C6 /* SearchViewController.swift */,
+				09C34B021CC5A2E200478639 /* DetailViewController.swift */,
+				09C34B001CC5797300478639 /* SearchViewController.swift */,
 				0974801C1CC4139400B4F8C6 /* MainViewController.swift */,
 			);
 			name = ViewControllers;
@@ -96,6 +101,7 @@
 		097480231CC4143B00B4F8C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				09C34B041CC5B46C00478639 /* MJ AlGhifari Demo.ttf */,
 				0965BABC1CBEB3F500FB74E5 /* Assets.xcassets */,
 				0965BAC11CBEB3F500FB74E5 /* Info.plist */,
 			);
@@ -169,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C34B051CC5B46C00478639 /* MJ AlGhifari Demo.ttf in Resources */,
 				0965BAC01CBEB3F500FB74E5 /* LaunchScreen.storyboard in Resources */,
 				0965BABD1CBEB3F500FB74E5 /* Assets.xcassets in Resources */,
 				0965BABB1CBEB3F400FB74E5 /* Main.storyboard in Resources */,
@@ -182,8 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0974801F1CC413CA00B4F8C6 /* SearchViewController.swift in Sources */,
+				09C34B011CC5797300478639 /* SearchViewController.swift in Sources */,
 				0974802A1CC42E3200B4F8C6 /* SearchItems.swift in Sources */,
+				09C34B031CC5A2E200478639 /* DetailViewController.swift in Sources */,
 				0965BAB61CBEB3F400FB74E5 /* AppDelegate.swift in Sources */,
 				0974801D1CC4139400B4F8C6 /* MainViewController.swift in Sources */,
 			);

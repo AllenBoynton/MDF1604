@@ -4,6 +4,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MJ AlGhifari Demo.ttf">
+            <string>MJ-AlGhifari</string>
+            <string>MJ-AlGhifari</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -16,13 +22,35 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boxerLoadscreen" translatesAutoresizingMaskIntoConstraints="NO" id="cW3-FS-ui5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dog Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRN-sv-RxM">
+                                <rect key="frame" x="20" y="293" width="335" height="95"/>
+                                <color key="backgroundColor" white="1" alpha="0.43008340371621623" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="MJ-AlGhifari" family=" MJ AlGhifari" pointSize="62"/>
+                                <color key="textColor" red="0.101923445" green="0.45274458740000001" blue="0.14796862429999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by Al Boynton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VS-21-tEV">
+                                <rect key="frame" x="20" y="388" width="335" height="62"/>
+                                <color key="backgroundColor" white="1" alpha="0.43008340369999998" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="MJ-AlGhifari" family=" MJ AlGhifari" pointSize="32"/>
+                                <color key="textColor" red="0.101923445" green="0.45274458740000001" blue="0.14796862429999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.266666666666666" y="355"/>
+            <point key="canvasLocation" x="27.5" y="354.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="boxerLoadscreen" width="320" height="480"/>
+    </resources>
 </document>
