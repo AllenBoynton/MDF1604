@@ -83,8 +83,8 @@
 		094E62581CC6F72500BA0CAA /* VeiwControllers */ = {
 			isa = PBXGroup;
 			children = (
-				094E625D1CC71EB500BA0CAA /* MapViewController.swift */,
 				094E62451CC6F6DC00BA0CAA /* ViewController.swift */,
+				094E625D1CC71EB500BA0CAA /* MapViewController.swift */,
 			);
 			name = VeiwControllers;
 			sourceTree = "<group>";
