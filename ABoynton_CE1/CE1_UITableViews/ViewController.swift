@@ -12,6 +12,7 @@ import UIKit
 
 // Private Global Constant Identifier
 private let cellIdentifier = "myCell"
+private let segueIdentifier = "toDetailVC"
 
 class ViewController: UIViewController, UITableViewDataSource {
     
@@ -56,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     // Passing data
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Accessing segue by calling the segue identifier
-        if segue.identifier == "toDetailVC" {
+        if segue.identifier == segueIdentifier {
             // Creating my destination assignment for where I want my data to go
             let destination = segue.destinationViewController as! DetailViewController
             // All important indexPath to access the table cells

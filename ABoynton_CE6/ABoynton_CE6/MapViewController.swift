@@ -12,116 +12,63 @@ import CoreLocation
 
 // Global identifiers
 let cellIdentifier = "Cell"
+let unwindSegue = "unwindToRootVC"
 let pinIdentifier = "Pin"
-
 
 class MapViewController: UIViewController {
     
+    // Protocol variables
     var locations: [Locations] = []
-    var currentPin: Locations?
+    var currentLocation: Locations? = nil
     
     // Location delegate initiated
     var locationManager = CLLocationManager()
     
+    // Outlet to user location map
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var pointImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // VC title
-        self.title = currentPin!.title
+        self.title = "Map"
         
-        // locationManager delegate created
+        // Creating map delegate
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
-        
-    }
-}
-
-extension MapViewController: MKMapViewDelegate {
-    
-    override func viewWillAppear(animated: Bool) {
-        getLocationData()
     }
     
-    // MARK: MKMapViewDelegate
+//    // Function connects segue from my MapViewController to my ViewController---------Could not get unwindSegue or custome delegate to work
+//        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//            var destination = segue.destinationViewController as! ViewController
+//            destination.currentLocation =
+//        }
     
-    // Custom function to call annotations including custom action function
-    // Setup up initial zoom and view
-    func getLocationData() {
-        let centerCoordinate = currentPin!.coordinate
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region = MKCoordinateRegion(center: centerCoordinate, span: span)
-        
-        // Formulates the map view
-        mapView.setRegion(region, animated: true)
-        
-        // Creates pin annotation location and titles
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = currentPin!.coordinate
-        annotation.title = currentPin!.title
-        annotation.subtitle = currentPin!.subtitle
-        
-        // Add annotations to map view
-        mapView.addAnnotation(annotation)
-        
-        // Custom image attributes
-        pointImage.image = UIImage(named: currentPin!.title!)
-        pointImage.layer.cornerRadius = CGRectGetWidth(pointImage.frame)/6.0
-        pointImage.clipsToBounds = true
-        pointImage.layer.borderColor = UIColor.blackColor().CGColor
-        pointImage.layer.borderWidth = 2
-        pointImage.layer.cornerRadius = 6
-        
-        // Customize the annotations
-        func customAnnotations() {
-            func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-                if annotation.isMemberOfClass(MKUserLocation.self) {
-                    return nil
-                }
-                
-                var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(pinIdentifier) as? MKPinAnnotationView
-                
-                // Create if statement so identifier can recognize pin as a nil object and assign its values
-                if pinView == nil {
-                    pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: pinIdentifier)
-                    
-                    // Create animation & customization
-                    pinView?.animatesDrop = true
-                    pinView?.canShowCallout = true
-                    pinView?.pinTintColor = UIColor.orangeColor()
-                }
-                return pinView
-            }
-        }
-    }
+    @IBAction func unwindToRootVC(segue: UIStoryboardSegue) {}
 }
 
 extension MapViewController: CLLocationManagerDelegate {
     
     // MARK: Location Authorization
+    // MARK: CLLocationManagerDelegate
     
     // Function gets user authorization for location access
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .AuthorizedWhenInUse {
-            locationManager.requestLocation()
+        if status == .NotDetermined {
+            locationManager.requestWhenInUseAuthorization()
         }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let center = locations.first {
-            let span = MKCoordinateSpanMake(0.05, 0.05)
-            let region = MKCoordinateRegion(center: center.coordinate, span: span)
-            
-            mapView.setRegion(region, animated: true)
-            print("Location: \(locations)")
-        }
+        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let region = MKCoordinateRegion(center: locValue, span: span)
+        
+        mapView.setRegion(region, animated: true)
+        print("Location: \(locations)")
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        locationManager.stopUpdatingLocation()
         print("ERROR: \(error)")
     }
     
@@ -138,16 +85,16 @@ extension MapViewController: CLLocationManagerDelegate {
         }
     }
     
-    // MARK: CLLocationManagerDelegate
-    
     // Swith to toggle the user's location on/off
     @IBAction func userLocationSwitch(sender: UISwitch) {
         if sender.on == true {
+            mapView.showsUserLocation = true
             locationManager.requestLocation()
-            print("User location is turned ON")
+            print("User location is turned ON.\nInitializing user's location")
         } else {
+            mapView.showsUserLocation = false
             locationManager.stopUpdatingLocation()
-            print("User location is turned OFF")
+            print("User location is turned OFF.\nStop user's location.")
         }
     }
 }

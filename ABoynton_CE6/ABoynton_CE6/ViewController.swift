@@ -11,13 +11,14 @@ import MapKit
 import CoreLocation
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
     
     var locations: [Locations] = []
-    var currentPin: Locations?
+    var currentLocation: Locations? = nil
+    var mapData: MKMapView?
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     @IBOutlet weak var usersLocationData: UILabel!
     @IBOutlet weak var xImage: UIImageView!
     @IBOutlet weak var checkMarkImage: UIImageView!
@@ -28,8 +29,16 @@ class ViewController: UIViewController {
         // Display title of each VC
         navigationItem.title = "Map Menu"
         
-        usersLocationData.text = ""
-        getLocations()
+        // location custom data
+        locations = [
+            Locations(title: "Downtown Greenville, SC", subtitle: "Hopping S.Main St.", coordinate: CLLocationCoordinate2D(latitude: 34.8495, longitude: -82.3995)),
+            Locations(title: "Lakeside Place Homes", subtitle: "Where I call home!", coordinate: CLLocationCoordinate2D(latitude: 34.862234, longitude: -82.353301)),
+            Locations(title: "Falls Park on the Reedy", subtitle: "Beautiful waterfall park!", coordinate: CLLocationCoordinate2D(latitude: 34.84421, longitude: -82.401505)),
+            Locations(title: "iStore", subtitle: "Independently owned Apple store", coordinate: CLLocationCoordinate2D(latitude: 34.848191, longitude: -82.400572)),
+            Locations(title: "Bon Secours Wellness Arena", subtitle: "Large events arena", coordinate: CLLocationCoordinate2D(latitude: 34.852476, longitude: -82.391517)),
+            Locations(title: "Larkin's on the River", subtitle: "My favorite restaurant!", coordinate: CLLocationCoordinate2D(latitude: 34.8465, longitude: -82.401581)),
+            Locations(title: "Nexsen Pruet Law Firm", subtitle: "This is where my fiance works!", coordinate: CLLocationCoordinate2D(latitude: 34.845051, longitude: -82.399741))
+        ]
     }
     
     // Add # of rows to table
@@ -47,39 +56,49 @@ class ViewController: UIViewController {
         return cell
     }
     
-    // Function connects segue from my MapViewController to my TableViewController
+    // Function connects segue from my ViewController to my AnnotationViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let detailView: MapViewController = segue.destinationViewController as! MapViewController
+        let destination = segue.destinationViewController as! AnnotationViewController
         let indexPath: NSIndexPath? = tableView.indexPathForSelectedRow
-        let currentPin: Locations = locations[indexPath!.row]
-        
-        detailView.currentPin = currentPin
+        let currentLocation: Locations = locations[indexPath!.row]
+        destination.currentLocation = currentLocation
     }
-
-    // location custom data
-    func getLocations() {
-        locations = [
-            Locations(title: "Downtown Greenville, SC", subtitle: "Hopping S.Main St.", coordinate: CLLocationCoordinate2D(latitude: 34.8495, longitude: -82.3995)),
-            Locations(title: "Lakeside Place Homes", subtitle: "Where I call home!", coordinate: CLLocationCoordinate2D(latitude: 34.862234, longitude: -82.353301)),
-            Locations(title: "Falls Park on the Reedy", subtitle: "Beautiful waterfall park!", coordinate: CLLocationCoordinate2D(latitude: 34.84421, longitude: -82.401505)),
-            Locations(title: "iStore", subtitle: "Independently owned Apple store", coordinate: CLLocationCoordinate2D(latitude: 34.848191, longitude: -82.400572)),
-            Locations(title: "Bon Secours Wellness Arena", subtitle: "Large events arena", coordinate: CLLocationCoordinate2D(latitude: 34.852476, longitude: -82.391517)),
-            Locations(title: "Larkin's on the River", subtitle: "My favorite restaurant!", coordinate: CLLocationCoordinate2D(latitude: 34.8465, longitude: -82.401581)),
-            Locations(title: "Nexsen Pruet Law Firm", subtitle: "This is where my fiance works!", coordinate: CLLocationCoordinate2D(latitude: 34.845051, longitude: -82.399741)),
-        ]
+    
+    // Displays user's location if active
+    func showUsersLocation() {
+        if showsUserLocation == true {
+            usersLocationData.text = "User's Location: \(locations)"
+        } else {
+            usersLocationData.text = "No user location found."
+        }
+    }
+    
+    // Displays visual confirmation that user location is active
+    func userLocationConfirmation() {
+        if showsUserLocation == true {
+            xImage.hidden = true
+            checkMarkImage.hidden = false
+        } else {
+            xImage.hidden = false
+            checkMarkImage.hidden = true
+        }
+    }
+    
+    // Unwind segue through bar button
+    @IBAction func unwindButtonTapped(sender: UIBarButtonItem, cellForRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier(unwindSegue, sender: self)
     }
     
     // Switch that removes annotations
     @IBAction func showAnnotations(sender: UISwitch) {
         if (sender.on) {
             // Switch is ON
-//            self.maps.viewForAnnotation(annotation)?.hidden = false
+            tableView.hidden = false
             print("Annotation switch is ON")
         } else {
             // Switch is OFF
-//            self.maps.viewForAnnotation(annotation)?.hidden = true
+            tableView.hidden = true
             print("Annotation switch is OFF")
         }
     }
 }
-

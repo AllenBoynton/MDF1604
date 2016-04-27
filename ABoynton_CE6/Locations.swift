@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 
-class Locations: NSObject {
+class Locations {
     
     var title: String?
     var subtitle: String?

@@ -15,6 +15,8 @@
 		094E625E1CC71EB500BA0CAA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E625D1CC71EB500BA0CAA /* MapViewController.swift */; };
 		094E62601CC720C200BA0CAA /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E625F1CC720C200BA0CAA /* Locations.swift */; };
 		094E62661CC840C600BA0CAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094E62651CC840C600BA0CAA /* MapKit.framework */; };
+		099EBD2C1CCD443900738310 /* LocationsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099EBD2B1CCD443900738310 /* LocationsDelegate.swift */; };
+		099EBD2E1CCDAFFF00738310 /* AnnotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099EBD2D1CCDAFFF00738310 /* AnnotationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		094E625D1CC71EB500BA0CAA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		094E625F1CC720C200BA0CAA /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		094E62651CC840C600BA0CAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		099EBD2B1CCD443900738310 /* LocationsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDelegate.swift; sourceTree = "<group>"; };
+		099EBD2D1CCDAFFF00738310 /* AnnotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		094E62581CC6F72500BA0CAA /* VeiwControllers */ = {
 			isa = PBXGroup;
 			children = (
+				099EBD2D1CCDAFFF00738310 /* AnnotationViewController.swift */,
 				094E62451CC6F6DC00BA0CAA /* ViewController.swift */,
 				094E625D1CC71EB500BA0CAA /* MapViewController.swift */,
 			);
@@ -109,6 +114,7 @@
 		094E62611CC720D000BA0CAA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				099EBD2B1CCD443900738310 /* LocationsDelegate.swift */,
 				094E625F1CC720C200BA0CAA /* Locations.swift */,
 			);
 			name = Protocols;
@@ -201,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				094E62461CC6F6DC00BA0CAA /* ViewController.swift in Sources */,
+				099EBD2C1CCD443900738310 /* LocationsDelegate.swift in Sources */,
 				094E625E1CC71EB500BA0CAA /* MapViewController.swift in Sources */,
+				099EBD2E1CCDAFFF00738310 /* AnnotationViewController.swift in Sources */,
 				094E62601CC720C200BA0CAA /* Locations.swift in Sources */,
 				094E62441CC6F6DC00BA0CAA /* AppDelegate.swift in Sources */,
 			);
