@@ -12,10 +12,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ABoynton_CE7_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Calendar View Controller" customClass="ViewController" customModule="ABoynton_CE7_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,6 +30,9 @@
                                 <state key="normal" title="Add Calendar">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2E-oW-c9t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,7 +41,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Next" id="7th-Lh-Im2">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="OsU-bx-Czu" kind="push" id="ajp-jB-VBp"/>
+                                <segue destination="OsU-bx-Czu" kind="push" id="mC4-9y-NnH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,6 +69,9 @@
                                 <state key="normal" title="Add Event">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createEvent:" destination="OsU-bx-Czu" eventType="touchUpInside" id="EnG-SI-mqM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4y-EJ-YXp">
                                 <rect key="frame" x="139" y="370" width="97" height="30"/>
@@ -73,6 +79,9 @@
                                 <state key="normal" title="Add Reminder">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createReminder:" destination="OsU-bx-Czu" eventType="touchUpInside" id="aO9-DA-1hl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
