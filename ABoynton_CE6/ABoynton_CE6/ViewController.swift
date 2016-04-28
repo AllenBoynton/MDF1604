@@ -14,17 +14,21 @@ import CoreLocation
 class ViewController: UIViewController, MKMapViewDelegate {
     
     var locations: [Locations] = []
-    var currentLocation: Locations? = nil
-    var mapData: MKMapView?
+    var userStatus: Bool? = nil
+    var currentLocation: String = ""
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var usersLocationData: UILabel!
+    @IBOutlet weak var unknownLocation: UILabel!
     @IBOutlet weak var xImage: UIImageView!
     @IBOutlet weak var checkMarkImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        showUsersLocation()
+        userLocationConfirmation()
         
         // Display title of each VC
         navigationItem.title = "Map Menu"
@@ -66,16 +70,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     // Displays user's location if active
     func showUsersLocation() {
-        if showsUserLocation == true {
-            usersLocationData.text = "User's Location: \(locations)"
+        if userStatus == true {
+            usersLocationData.text = currentLocation
+            usersLocationData.hidden = false
+            unknownLocation.hidden = true
+            print("Location ON")
         } else {
-            usersLocationData.text = "No user location found."
+            unknownLocation.text = "No user location found."
+            usersLocationData.hidden = true
+            unknownLocation.hidden = false
+            print("Location OFF")
         }
     }
     
     // Displays visual confirmation that user location is active
     func userLocationConfirmation() {
-        if showsUserLocation == true {
+        if userStatus == true {
             xImage.hidden = true
             checkMarkImage.hidden = false
         } else {
@@ -86,7 +96,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     // Unwind segue through bar button
     @IBAction func unwindButtonTapped(sender: UIBarButtonItem, cellForRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier(unwindSegue, sender: self)
+        self.performSegueWithIdentifier(secondVC, sender: self)
     }
     
     // Switch that removes annotations

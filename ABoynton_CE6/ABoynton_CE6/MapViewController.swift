@@ -12,7 +12,8 @@ import CoreLocation
 
 // Global identifiers
 let cellIdentifier = "Cell"
-let unwindSegue = "unwindToRootVC"
+let segueIdentifier = "toAnnotation"
+let secondVC = "toSecond"
 let pinIdentifier = "Pin"
 
 class MapViewController: UIViewController {
@@ -23,6 +24,7 @@ class MapViewController: UIViewController {
     
     // Location delegate initiated
     var locationManager = CLLocationManager()
+    var place: String = ""
     
     // Outlet to user location map
     @IBOutlet weak var mapView: MKMapView!
@@ -36,12 +38,6 @@ class MapViewController: UIViewController {
         // Creating map delegate
         locationManager.delegate = self
     }
-    
-//    // Function connects segue from my MapViewController to my ViewController---------Could not get unwindSegue or custome delegate to work
-//        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//            var destination = segue.destinationViewController as! ViewController
-//            destination.currentLocation =
-//        }
     
     @IBAction func unwindToRootVC(segue: UIStoryboardSegue) {}
 }
@@ -64,7 +60,13 @@ extension MapViewController: CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: locValue, span: span)
         
         mapView.setRegion(region, animated: true)
-        print("Location: \(locations)")
+        mapView.showsUserLocation = true
+        
+        place = "London, England: \(locations)"
+        
+        shouldPerformSegueWithIdentifier(secondVC, sender: self)
+
+        print("Location: London, England: \(locations)")
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -90,11 +92,21 @@ extension MapViewController: CLLocationManagerDelegate {
         if sender.on == true {
             mapView.showsUserLocation = true
             locationManager.requestLocation()
-            print("User location is turned ON.\nInitializing user's location")
+            
+            shouldPerformSegueWithIdentifier(secondVC, sender: sender)
+            print("User location is turned ON.")
+            
         } else {
             mapView.showsUserLocation = false
             locationManager.stopUpdatingLocation()
-            print("User location is turned OFF.\nStop user's location.")
+            print("User location is turned OFF.")
         }
+    }
+    
+    // Function connects segue from my MapViewController to my ViewController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController as! ViewController
+        destination.userStatus = mapView.showsUserLocation
+        destination.currentLocation = place
     }
 }
