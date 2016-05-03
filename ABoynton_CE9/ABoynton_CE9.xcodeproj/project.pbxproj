@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09FAECC21CD1C99A001E7DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FAECC11CD1C99A001E7DD8 /* AppDelegate.swift */; };
-		09FAECC41CD1C99A001E7DD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FAECC31CD1C99A001E7DD8 /* ViewController.swift */; };
+		09FAECC41CD1C99A001E7DD8 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FAECC31CD1C99A001E7DD8 /* ContactViewController.swift */; };
 		09FAECC71CD1C99A001E7DD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAECC51CD1C99A001E7DD8 /* Main.storyboard */; };
 		09FAECC91CD1C99A001E7DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FAECC81CD1C99A001E7DD8 /* Assets.xcassets */; };
 		09FAECCC1CD1C99A001E7DD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FAECCA1CD1C99A001E7DD8 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		09FAECBE1CD1C99A001E7DD8 /* ABoynton_CE9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABoynton_CE9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FAECC11CD1C99A001E7DD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09FAECC31CD1C99A001E7DD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09FAECC31CD1C99A001E7DD8 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		09FAECC61CD1C99A001E7DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09FAECC81CD1C99A001E7DD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09FAECCB1CD1C99A001E7DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		09FAECD31CD1C9CB001E7DD8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				09FAECC31CD1C99A001E7DD8 /* ViewController.swift */,
+				09FAECC31CD1C99A001E7DD8 /* ContactViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FAECC41CD1C99A001E7DD8 /* ViewController.swift in Sources */,
+				09FAECC41CD1C99A001E7DD8 /* ContactViewController.swift in Sources */,
 				09FAECC21CD1C99A001E7DD8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +310,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullsail.ABoynton-CE9";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +322,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.fullsail.ABoynton-CE9";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
